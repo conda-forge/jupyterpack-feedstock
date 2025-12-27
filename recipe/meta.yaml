@@ -1,5 +1,5 @@
 {% set name = "jupyterpack" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d86c264415217531a5de6b18956e84ecf1583a09f3ca6477a2f89f43b4defec
+  sha256: ec7d8776bf11aae157a5b6fe481043a0da55cf5fed4a0c9a453e9e4f1326fad9
 
 build:
   noarch: python
@@ -25,6 +25,11 @@ requirements:
     - hatch-jupyter-builder >=0.5
   run:
     - python >={{ python_min }}
+    - httpx
+    - tornado
+    - starlette
+    - numpy
+    - pandas
 
 test:
   imports:
