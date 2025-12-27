@@ -25,6 +25,11 @@ requirements:
     - hatch-jupyter-builder >=0.5
   run:
     - python >={{ python_min }}
+    - httpx
+    - tornado
+    - starlette
+    - numpy
+    - pandas
 
 test:
   imports:
