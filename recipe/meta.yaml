@@ -1,5 +1,5 @@
 {% set name = "jupyterpack" %}
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ae4207ed601c343d94585f97c1b4f56bd497efadb9ecf4770e4a7d25a5f2a5cd
+  sha256: 897138fd80c79dd0ff33bd31a02c5bed675b733cb03548ef8425356cdd237119
 
 build:
   noarch: python
@@ -30,6 +30,7 @@ requirements:
     - starlette
     - numpy
     - pandas
+    - specta
 
 test:
   imports:
