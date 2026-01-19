@@ -30,7 +30,7 @@ requirements:
     - starlette
     - numpy
     - pandas
-    - specta
+    - specta >=0.4.6
 
 test:
   imports:
